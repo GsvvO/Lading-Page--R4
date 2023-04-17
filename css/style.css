@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --font-title: 'Bebas Neue', cursive;
+    --font-subtitle: 'arial', 'monospace';
+    --bg-header: #12171E;
+    --bg-main: #12171E;;
+    --bg-footer: #010611;
+    --bg-derivados: #263241;
+    --red: #9A2A29;
+    --branco: #fff;
+    --preto: #000;
+    --bg-bege: #CFCCC0;
+    --shadow-box: 0 0 2px 3px #1d2631;
+}
+
+body{
+    background-color: rgba(0,0,0,0.1);
+    overflow-x: hidden;
+}
+/* Uso geral */
+.container{
+    display: flex;
+    max-width: 120rem;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    height: 100%;
+    color: var(--branco);
+}
+
+a{  
+    color: var(--branco);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--red);
+}
+
+.color-red{
+    color: var(--red);
+}
+
+.text-description{
+    color: var(--branco);
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.border{ 
+    background-color: var(--bg-derivados);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--shadow-box);
+}
+
+button{
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover{
+    background-color: rgb(255,255,255,0.8);
+    color: var(--preto);
+}
+/* --------------------------------- */
+
+/* Header */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5rem;
+    padding: 2rem;
+    color: var(--branco);
+    border-bottom: 1px solid #1d2631;
+    background-color: var(--bg-header);
+    box-shadow: 0 2px 7px 0 rgba(0,0,0,.3);
+}
+
+.header-division{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .icon-header{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .name-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .gaming{
+    color: var(--red);
+}
+
+header h1{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-title);
+    font-size: 5rem;
+}
+/* --------------------------------- */
+
+/* Main */
+
+/* Vídeo */
+main{
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-main);
+}
+
+.space{
+    gap: 2rem;
+    padding: 2rem;
+}
+
+main .info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 20rem;
+    gap: 5rem;
+}
+
+main .info{
+    flex: 2;
+}
+
+main .video-r4{
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    box-shadow: var(--shadow-box)
+}
+
+main iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Informações complementares */
+.text{
+    display: block;
+    width: auto;
+    font-family: var(--font-title);
+    color: var(--bg-derivados);
+    font-size: 4rem;
+}
+
+.pagamentos, .historia{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    color: var(--branco);
+}
+
+.credicard, .paypal, .bitcoin, .historia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: justify;
+    flex: 1;
+    transition: all 0.5s ease;
+}
+
+.credicard:hover, .paypal:hover, .bitcoin:hover{
+    background-color: rgba(255,255,255,0.3);
+    transform: scale(1.1);
+}
+
+main .pagamento{
+    font-size: 2.5rem;
+    font-family: var(--font-subtitle);
+    gap: 0.5rem;
+}
+
+main p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+/* Aside */
+main aside{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+    color: var(--branco);
+    border-radius: 0.5rem;
+}
+
+.compra, .problemas{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+aside .title{
+    font-family: var(--font-title);
+    font-size: 4rem;
+    color: rgba(255,255,255,0.5);
+}
+
+aside .descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+aside .desconto{
+    display: flex;
+    gap: 1rem;
+}
+
+aside .porcentagem-desconto{
+    display: flex;
+    background-color: rgba(255,0,0,0.8);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-family: var(--font-subtitle);
+    font-size: 2em;
+    align-items: center;
+}
+
+aside .preco{
+    display: flex;
+    flex-direction: column;
+}
+
+.preco .old{
+    text-decoration: line-through;
+    text-align: left;
+}
+
+.preco .new{
+    color: var(--branco);
+    font-size: 3.5rem;
+    text-align: end;
+    font-family: var(--font-title);
+}
+
+aside .desconto i{
+    font-style: normal;
+}
+
+aside .botoes{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.comprar, .favoritos, .enviar{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    flex: 1;
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--branco);
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.comprar{
+    background-color: var(--red);
+}
+
+.botoes ion-icon{
+    margin-right: 0.5rem;
+}
+
+.main-problemas{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.main-problemas .comentario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.comentario input{
+    outline: none;
+    min-height: 2rem;
+    text-align: center;
+}
+
+.comentario textarea{
+    outline: none;
+    min-height: 10rem;
+    resize: none;
+    text-align: center;
+}
+
+.main-problemas .botoes{
+    max-width: 10rem;
+}
+
+.comentario input:focus, .comentario textarea:focus{
+    border: 2px solid var(--bg-footer);
+}
+
+.main-problemas ion-icon{
+    margin-left: 0.5rem;
+}
+/* --------------------------------- */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-footer);
+    min-height: 5rem;
+    color: var(--branco);
+    font-family: var(--font-title);
+    font-size: 3rem;
+    padding: 2rem 0 2rem 0; 
+    border-top: 1px solid #1d2631;
+    box-shadow: 0 2px 7px 0 rgba(0,0,0,.3);
+    text-align: center;
+}
+
+footer i{
+    font-size: 1.5rem;
+    font-style: normal;
+}
+
+footer a{
+    color: blue;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* MEDIA QUERY */
+
+@media  screen and (max-width: 890px){
+    html{
+        font-size: 50%;
+    }
+    
+}
+
+@media  screen and (max-width: 720px){
+    .container{
+        flex-direction: column;
+    }
+}
+
+@media  screen and (max-width: 470px){
+    .pagamentos{
+        flex-direction: column;
+    }
+
+    .credicard:hover, .paypal:hover, .bitcoin:hover{
+        transform: scale(1);
+    }
+}
